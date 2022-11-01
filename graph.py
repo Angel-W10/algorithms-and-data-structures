@@ -47,11 +47,21 @@ class graph():
             print("\n")
 
 
+    # def DFS(self):
+
+
+
 if __name__ == "__main__":
-    g = graph(4)
+    g = graph(6)
     g.addEdge(0, 1)
-    g.addEdge(0, 2)
-    g.addEdge(1, 3)
-    g.addEdge(2, 3)
+    g.addEdge(0, 3)
+    g.addEdge(1, 2)
+    g.addEdge(1, 5)
+    g.addEdge(3, 4)
+    g.addEdge(5, 3)
 
     g.printGraph()
+    # print(g.DFS())
+
+    print(g.graph[0].vertex)
+    
