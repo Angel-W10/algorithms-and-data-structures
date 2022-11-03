@@ -6,5 +6,5 @@ all of the code would be done in python
 
 1. Graph using adjcency list
 2. Binary Search Trees
-3. Deapth First Search
+3. Lnked list
 4. Breadth First search
