@@ -32,8 +32,10 @@ class linked_list():
         if(self.head):
             temp = self.head
             while(temp is not None):
-                print(temp.value)
+                # print(temp.value)
+                print("%d -> " %temp.value, end="")
                 temp = temp.next
+            print("None\n")
 
     # function to delete a value if its in the list
     # check if in the list
