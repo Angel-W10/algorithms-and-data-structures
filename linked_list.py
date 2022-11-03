@@ -35,6 +35,22 @@ class linked_list():
                 print(temp.value)
                 temp = temp.next
 
+    # function to delete a value if its in the list
+    # check if in the list
+    # temp to the value
+    # value->next = link
+    # temp ->next = link
+    def delete_value(self, value):
+        if(value==None):
+            return False
+
+        if(self.head):
+            temp = self.head
+            while(temp.next.value is not value):
+                temp = temp.next
+            link = temp.next.next
+            temp.next = link
+
 
 
 
@@ -47,5 +63,10 @@ if __name__ == "__main__":
     mylist.insert_value(13)
     mylist.insert_value(14)
 
+    print("old")
+    mylist.print_list()
 
+    mylist.delete_value(12)
+    mylist.delete_value(13)
+    print("new")
     mylist.print_list()
