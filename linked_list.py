@@ -27,16 +27,6 @@ class linked_list():
         
         temp.next = Node(value)
 
-    # function to print the linked list
-    def print_list(self):
-        if(self.head):
-            temp = self.head
-            while(temp is not None):
-                # print(temp.value)
-                print("%d -> " %temp.value, end="")
-                temp = temp.next
-            print("None\n")
-
     # function to delete a value if its in the list
     # check if in the list
     # temp to the value
@@ -53,7 +43,15 @@ class linked_list():
             link = temp.next.next
             temp.next = link
 
-
+    # function to print the linked list
+    def print_list(self):
+        if(self.head):
+            temp = self.head
+            while(temp is not None):
+                # print(temp.value)
+                print("%d -> " %temp.value, end="")
+                temp = temp.next
+            print("None\n")
 
 
 
