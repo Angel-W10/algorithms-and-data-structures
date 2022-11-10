@@ -4,6 +4,8 @@
 
 # we create a class that would adjvertex
 
+from collections import deque
+
 class adjVertex():
     def __init__(self, value):
         self.vertex = value
@@ -47,7 +49,9 @@ class graph():
             print("\n")
 
 
-    # def DFS(self):
+    def BFS(self):
+       pass
+        
 
 
 
@@ -60,8 +64,8 @@ if __name__ == "__main__":
     g.addEdge(3, 4)
     g.addEdge(5, 3)
 
-    g.printGraph()
-    # print(g.DFS())
+    # g.printGraph()
+    g.BFS()
 
-    print(g.graph[0].vertex)
+    # print(g.graph[0].vertex)
     
