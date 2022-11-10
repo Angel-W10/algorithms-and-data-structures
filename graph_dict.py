@@ -23,14 +23,39 @@ class graph():
                 self.DFS_helper(n, visited)
 
 
+    def BFS(self, v):
+        # print(len(self.graph))
+        visited = [-1]* (max(self.graph) + 1)
+        q = []
+
+        q.append(v)
+        visited[v] = 1
+
+        while(q):
+            v = q.pop(0)
+            print(v, end=" ")
+
+            for n in self.graph[v]:
+                if(visited[n]==-1):
+                    q.append(n)
+                    visited[n] = 1
+
+
+
+
+
+
+
 
 if __name__ == "__main__":
     g = graph()
     g.add_vertex(0, 1)
     g.add_vertex(0, 2)
     g.add_vertex(1, 2)
-    g.add_vertex(1, 3)
-    g.add_vertex(2, 4)
-    g.add_vertex(3, 4)
-
-    g.DFS(0)
+    g.add_vertex(2, 0)
+    g.add_vertex(2, 3)
+    g.add_vertex(3, 3)
+    print("DFS")
+    g.DFS(2)
+    print("\nBFS")
+    g.BFS(2)
