@@ -41,12 +41,6 @@ class graph():
                     visited[n] = 1
 
 
-
-
-
-
-
-
 if __name__ == "__main__":
     g = graph()
     g.add_vertex(0, 1)
@@ -59,3 +53,4 @@ if __name__ == "__main__":
     g.DFS(2)
     print("\nBFS")
     g.BFS(2)
+    print("\n")
