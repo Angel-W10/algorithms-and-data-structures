@@ -60,7 +60,7 @@ if __name__ == "__main__":
     g.addEdge(5, 3)
 
     # g.printGraph()
-    DFS(g, 0)
+    # DFS(g, 0)
 
     # print(g.graph[0].vertex)
     
