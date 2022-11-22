@@ -4,7 +4,7 @@
 from collections import defaultdict
 
 class graph():
-    def __init__(self):
+    def __init__(self): 
         self.graph = defaultdict(list)
 
     def add_vertex(self, src, des):
@@ -40,6 +40,13 @@ class graph():
                     q.append(n)
                     visited[n] = 1
 
+    def print_graph(self):
+        for i in range(len(self.graph)):
+            print("%d :" %i, end=" ")
+            for _ in self.graph[i]:
+                print("%d "%_, end = "")
+            print("\n")
+
 
 if __name__ == "__main__":
     g = graph()
@@ -54,3 +61,5 @@ if __name__ == "__main__":
     print("\nBFS")
     g.BFS(2)
     print("\n")
+    print("Printing the graph: ")
+    g.print_graph()

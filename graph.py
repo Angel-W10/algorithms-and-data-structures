@@ -49,11 +49,6 @@ class graph():
             print("\n")
 
 
-    def BFS(self):
-       pass
-        
-
-
 
 if __name__ == "__main__":
     g = graph(6)
@@ -65,7 +60,7 @@ if __name__ == "__main__":
     g.addEdge(5, 3)
 
     # g.printGraph()
-    g.BFS()
+    DFS(g, 0)
 
     # print(g.graph[0].vertex)
     
