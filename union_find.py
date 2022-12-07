@@ -17,7 +17,7 @@ class union_find():
     def union(self, x, y):
 
         # union (x, y) means we need to join x to y
-        # we need to change the value of each value that has parent as x to havign a parent y
+        # we need to change the value of each value that has parent as x to having a parent y
 
         rootx, rooty = self.parents[x], self.parents[y]
         for i in self.parents:
