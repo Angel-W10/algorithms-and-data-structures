@@ -8,3 +8,4 @@ All of the code would be done in python
 2. Binary Search Trees
 3. Lnked list
 4. Breadth First search
+5. Dijkstras algorithm on a graph using adjecency matrix
