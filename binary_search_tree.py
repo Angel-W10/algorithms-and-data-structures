@@ -34,6 +34,53 @@ class tree():
                     temp.right = node(val)
                 else:
                     return self.insert_node_helper(temp.right, val)
+    
+    # delete function for the search tree
+    def delete_node(self, value):
+        r = self.root
+        self.delete_helper(r, value)
+
+    # helper function for the delete function for the binary search tree
+    def delete_helper(self, root, value):
+        if(root == None): # edge case
+            return root
+        # traversing to the value to delete
+        elif (value < root.value):
+            root.left = self.delete_helper(root.left, value)
+        elif (value > root.value):
+            root.right = self.delete_helper(root.right, value)
+
+        # once we are at the value we go inside the else case 
+        else:
+            # if it is a leaf node or only a right child
+            if(not root.left):
+                temp = root.right
+                del root
+                return temp
+
+            # if it only has a left child
+            elif(not root.right):
+                temp = root.left
+                del root
+                return temp
+
+            # two children
+            else:
+                # in the else we take the minimum of the right subtree of the node
+                # as it will replace the node to be deleted and still satisfy the conndition
+                # of being smaller than all the elements to the right and 
+                # larger than all the elements to the left
+                temp = self.get_min(root.right)
+                root.value = temp.value
+                root.right = self.delete_helper(root.right, temp.value)
+
+        return root
+                
+    def get_min(self, root):
+        while(root.left != None):
+            root = root.left
+        return root
+
 
     # printing the tree in order
     def print_in_order(self):
